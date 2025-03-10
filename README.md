@@ -6,6 +6,9 @@ This template was bootstrapped with [Create React App](https://github.com/facebo
 
 In the project directory, you can run:
 
+### `npm install`
+Installs all the dependencies needed for the project.
+
 ### `npm start`
 
 Runs the app in the development mode.\
