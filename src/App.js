@@ -15,7 +15,7 @@ const appRouter = createBrowserRouter([
     element: <Recipes />,
   },
   {
-    path: "/Cooking",
+    path: "/Cooking/:id",
     element: <Cooking />,
   },
 ]);
