@@ -1,0 +1,58 @@
+
+.home-page .header{
+    position: absolute;
+    width: 100%;
+    background: transparent;
+    z-index: 10
+}
+
+
+
+.content {
+    background-image: url(./images/Background-image.jpg);
+    min-height: 60vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: white;
+}
+
+
+
+.overlay {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    color: white;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+    
+}
+
+.overlay h1{
+    font-size: 76px;
+    font-weight: lighter;
+}
+
+@media (max-width: 1200px) {
+    .content {
+        min-height: 50vh;
+    }
+    .overlay h1 {
+        font-size: 52px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        min-height: 35vh;
+    }
+    .overlay h1 {
+        font-size: 32px;
+    }
+}
+
+
