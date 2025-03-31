@@ -13,10 +13,8 @@ function Header() {
               Home
             </Link>
             <Link to="/Recipes" className="btn btn-light ">
-              {" "}
               List of Recipes
             </Link>
-            {/* <Link to ="/Cooking" className="btn btn-light " > Cooking</Link> */}
           </div>
         </div>
       </nav>
