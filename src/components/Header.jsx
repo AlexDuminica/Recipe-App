@@ -6,7 +6,9 @@ function Header() {
       <nav>
         <div className="p-3 d-flex flex-row justify-content-between align-items-center">
           <div>
-            <h2 style={{ color: "#D3D4D5" }}>Let's get cooking 🍳</h2>
+            <Link to="/" style={{ color: "#D3D4D5" }} className="home-underline">
+              <h2>Let's get cooking 🍳</h2>
+            </Link>
           </div>
           <div className="d-flex  gap-2">
             <Link to="/" className="btn btn-light">
