@@ -3,15 +3,22 @@ import Layout from "../components/Layout";
 import useRecipeById from "../components/useRecipeById";
 import { useParams } from "react-router-dom";
 import "./Cooking.css";
+import { addToFavourites } from "../store/Favourites/actions";
+import { useContext } from "react";
+import { FavouritesContext } from "../store/Favourites/context";
 
 export const Cooking = () => {
+  const { favouritesDispatch } = useContext(FavouritesContext);
   const params = useParams();
-  console.log(params);
+
   const recipe = useRecipeById(params.id);
 
-  const { name, category, cuisine, instructions, image, video, ingredients, tag } = recipe;
+  const { id, name, category, cuisine, instructions, image, video, ingredients, tag } = recipe;
 
-  console.log("RECIPEEEEE", recipe);
+  const handleAddToFavourites = (recipes) => {
+    const actionResult = addToFavourites(recipes);
+    favouritesDispatch(actionResult);
+  };
   return (
     <Layout>
       <h2 className="title"> {name} </h2>
@@ -19,13 +26,13 @@ export const Cooking = () => {
         <div>
           <Image src={image} alt="dish" />
           <div className="d-flex flex-row gap-2 justify-content-center">
-            <p>{tag}</p>
-            <p>{category}</p>
-            <p>{cuisine}</p>
+            <div className="food-categ">
+              ({tag} {category} {cuisine})
+            </div>
           </div>
         </div>
 
-        <Card className="card">
+        <Card className="cardInCooking">
           <h5>
             List of Ingredients<span class="material-symbols-outlined">grocery</span>
           </h5>
@@ -43,13 +50,26 @@ export const Cooking = () => {
       <div className="d-flex flex-column justify-content-center mx-5 p-3 cookInstructions">
         <h5>Cooking instructions</h5>
         <p>{instructions}</p>
+        <Button
+          onClick={() => {
+            handleAddToFavourites({
+              id,
+              image,
+              name,
+              category,
+              cuisine,
+              hasCloseButton: true,
+            });
+          }}
+        >
+          Save recipe
+        </Button>
       </div>
       <Container className="my-5">
         <div>
           <iframe src={video} />
         </div>
       </Container>
-      <Button className="m-3">Save recipe </Button>
     </Layout>
   );
 };

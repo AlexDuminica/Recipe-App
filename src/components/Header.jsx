@@ -17,6 +17,9 @@ function Header() {
             <Link to="/Recipes" className="btn btn-light ">
               List of Recipes
             </Link>
+            <Link to="/Favourites" className="btn btn-light ">
+              Favourites
+            </Link>
           </div>
         </div>
       </nav>

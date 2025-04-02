@@ -8,9 +8,13 @@ img {
 
 }
 
-.card {
+.cardInCooking {
     height: 400px;
     width: 400px
+}
+
+.cardInCooking h5 {
+    padding-top: 5px;
 }
 
 .material-symbols-outlined{
@@ -21,7 +25,7 @@ img {
 }
 
 .cookInstructions{
-    background-color: lightblue;
+    background-color: lightgrey;
     border: 2px dotted black;
     width: auto;
 }

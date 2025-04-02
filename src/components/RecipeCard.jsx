@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function RecipeCard(props) {
   const { imgSrc, title, mealId } = props;
   return (
-    <Card className="d-flex justify-content-between align-items center">
+    <Card className="d-flex justify-content-between align-items center my-1">
       <Card.Img variant="top" src={imgSrc} />
       <Card.Body>
         <Card.Title className="fw-bold">{title}</Card.Title>

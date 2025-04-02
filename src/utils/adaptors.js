@@ -87,8 +87,6 @@ export function getRecipeDetails(apiResponse) {
       });
     }
 
-    console.log("INGREDIENTS -------------->", ingredients);
-
     return {
       id: meals.idMeal,
       name: meals.strMeal,

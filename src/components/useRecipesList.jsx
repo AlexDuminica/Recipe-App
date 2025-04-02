@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { APIs } from "../api/endpoint";
+import { getRecipeDetails } from "../utils/adaptors";
 
 // convert thids into a hook and get the data from the hook and use it in your component
 export const useRecipeList = () => {
@@ -12,7 +13,7 @@ export const useRecipeList = () => {
     fetch(APIs.search)
       .then((response) => response.json())
       .then((data) => {
-        setRecipes(data.meals);
+        setRecipes(getRecipeDetails(data));
       })
       .catch((e) => {
         setError(e);

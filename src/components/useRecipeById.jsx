@@ -9,14 +9,10 @@ export default function useRecipeById(id) {
     fetch(`${APIs.searchById}${id}`)
       .then((response) => response.json())
       .then((data) => {
-        console.log("TAGGGGGGGG >>>>>>>>>> ", data);
         setRecipe(getRecipeDetails(data)[0]);
       })
-      .catch((e) => {
-        console.log("Error get recipeById", e);
-      });
+      .catch((e) => {});
   }, [id]);
 
-  console.log(id, recipe);
   return recipe;
 }
