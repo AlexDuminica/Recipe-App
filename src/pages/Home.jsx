@@ -2,8 +2,16 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import "../LandingPage.css";
 import CarouselComp from "../components/CarouselComp";
+import { useContext, useEffect, useReducer } from "react";
+import { addFavouritesFromLocalStorage } from "../store/Favourites/actions";
+import { FavouritesContext } from "../store/Favourites/context";
 
 export default function Home() {
+  const { favouritesDispatch } = useContext(FavouritesContext);
+
+  useEffect(() => {
+    favouritesDispatch(addFavouritesFromLocalStorage());
+  }, []);
   return (
     <div className="home-page">
       <Header />

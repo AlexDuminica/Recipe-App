@@ -5,9 +5,11 @@ import { Recipes } from "./pages/Recipes";
 import "./components/Header.css";
 import { Cooking } from "./pages/Cooking";
 import Favourites from "./pages/Favourites";
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import { favouritesReducer, initialState } from "./store/Favourites/reducer";
 import { FavouritesContext } from "./store/Favourites/context";
+import { addFavouritesFromLocalStorage } from "./store/Favourites/actions";
+import LocalStorageApp from "./components/LocalStorageApp";
 
 const appRouter = createBrowserRouter([
   {
@@ -31,10 +33,12 @@ const appRouter = createBrowserRouter([
 function App() {
   const [favouritesState, favouritesDispatch] = useReducer(favouritesReducer, initialState);
   const favouritesContextValue = { favouritesState, favouritesDispatch };
+
   return (
     <div className="App bg">
       <FavouritesContext.Provider value={favouritesContextValue}>
         <RouterProvider router={appRouter} />
+        <LocalStorageApp />
       </FavouritesContext.Provider>
     </div>
   );

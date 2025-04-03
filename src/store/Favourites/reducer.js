@@ -14,9 +14,18 @@ export function favouritesReducer(state, action) {
         const newState = {
           recipes: [action.payload, ...state.recipes],
         };
+
+        localStorage.setItem("favourites", JSON.stringify(newState));
+
         return newState;
       }
     }
+    case "ADD_FAVOURITES_FROM_LOCAL_STORAGE": {
+      const localFavourites = JSON.parse(localStorage.getItem("favourites"));
+      console.log(localFavourites);
+      return localFavourites;
+    }
+
     case "REMOVE_FROM_FAVOURITES": {
       const filteredRecipes = state.recipes.filter((recipesItem) => {
         return recipesItem.id !== action.payload.id;
@@ -24,6 +33,9 @@ export function favouritesReducer(state, action) {
       const newState = {
         recipes: filteredRecipes,
       };
+
+      localStorage.setItem("favourites", JSON.stringify(newState));
+
       return newState;
     }
     default: {
