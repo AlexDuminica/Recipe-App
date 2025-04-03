@@ -1,10 +1,10 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import "../LandingPage.css";
-import { useContext, useEffect, useReducer } from "react";
+import { useContext, useEffect } from "react";
 import { addFavouritesFromLocalStorage } from "../store/Favourites/actions";
 import { FavouritesContext } from "../store/Favourites/context";
-import { Button, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export default function Home() {
@@ -12,7 +12,8 @@ export default function Home() {
 
   useEffect(() => {
     favouritesDispatch(addFavouritesFromLocalStorage());
-  }, []);
+  }, [favouritesDispatch]);
+
   return (
     <div className="home-page">
       <Header />
