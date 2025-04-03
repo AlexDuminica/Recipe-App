@@ -2,6 +2,11 @@
 .header {
     background-color: #1D1C1A;
     align-items: center;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0; 
+    z-index: 1;
   
 }
 
@@ -9,38 +14,3 @@
     text-decoration: none;
 }
 
-.hamburger{
-    display: none;
-}
-
-@media (max-width:765px) {
-    .originalMenu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 50px;
-        right: 20px;
-        background: whitesmoke;
-        opacity: 0.8;
-        padding: 10px;
-        border-radius: 5px;
-    }
-    .hamburger {
-            display: flex;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px
-        }
-        
-    .hamburger span {
-            width: 30px;
-            height: 30px;
-            background: transparent;
-            display: block;
-            transition: 0.4s;
-        }
-        .hamburger .material-symbols-outlined {
-            color: white;
-            
-        }
-    }

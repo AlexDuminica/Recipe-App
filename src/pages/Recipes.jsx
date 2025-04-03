@@ -9,7 +9,7 @@ export const Recipes = () => {
   return (
     <Layout>
       <Container>
-        <h1> Recipes</h1>
+        <h1 style={{ marginTop: "10px", marginBottom: "20px" }}> Recipes</h1>
         <h5>
           Explore a variety of mouthwatering dishes curated just for you. Whether you're looking for
           a quick weekday meal or something special to impress your guests, you'll find plenty of

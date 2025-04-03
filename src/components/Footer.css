@@ -1,0 +1,11 @@
+.credentials{
+    bottom: 10px;
+    right: 0%;
+    left: 0;
+    padding-bottom: 25px;
+    padding-top:15px;
+    background-color: #f7f7f7;
+}
+.socialButton{
+    margin: 10px;
+}
