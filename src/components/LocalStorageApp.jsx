@@ -7,7 +7,7 @@ export default function LocalStorageApp() {
 
   useEffect(() => {
     favouritesDispatch(addFavouritesFromLocalStorage());
-  }, []);
+  }, [favouritesDispatch]);
 
   return <div></div>;
 }

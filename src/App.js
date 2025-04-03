@@ -5,10 +5,9 @@ import { Recipes } from "./pages/Recipes";
 import "./components/Header.css";
 import { Cooking } from "./pages/Cooking";
 import Favourites from "./pages/Favourites";
-import { useEffect, useReducer } from "react";
+import { useReducer } from "react";
 import { favouritesReducer, initialState } from "./store/Favourites/reducer";
 import { FavouritesContext } from "./store/Favourites/context";
-import { addFavouritesFromLocalStorage } from "./store/Favourites/actions";
 import LocalStorageApp from "./components/LocalStorageApp";
 
 const appRouter = createBrowserRouter([
