@@ -34,7 +34,8 @@ export const Cooking = () => {
 
         <Card className="cardInCooking">
           <h5>
-            List of Ingredients<span class="material-symbols-outlined">grocery</span>
+            List of Ingredients
+            <span class="material-symbols-outlined">nutrition</span>
           </h5>
           {ingredients?.map((ingredient) => {
             return (
@@ -47,7 +48,7 @@ export const Cooking = () => {
         </Card>
       </Container>
       <br />
-      <div className="d-flex flex-column justify-content-center mx-5 p-3 cookInstructions">
+      <Container className="d-flex flex-column justify-content-center p-3 cookInstructions">
         <h5>Cooking instructions</h5>
         <p>{instructions}</p>
         <Button
@@ -64,7 +65,7 @@ export const Cooking = () => {
         >
           Save recipe
         </Button>
-      </div>
+      </Container>
       <Container className="my-5">
         <div>
           <iframe src={video} />

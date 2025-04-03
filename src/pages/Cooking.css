@@ -25,9 +25,10 @@ img {
 }
 
 .cookInstructions{
-    background-color: lightgrey;
+    background-color: white;
     border: 2px dotted black;
-    width: auto;
+    max-width: 1000px;
+    align-items: center;
 }
 
 @media (max-width: 765px) {

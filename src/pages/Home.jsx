@@ -21,7 +21,22 @@ export default function Home() {
         </div>
       </div>
       <div>
-        <h3>Add a text presenting the app</h3>
+        <h4 className="my-5 px-5">
+          <p>
+            Let's Get Cooking" is a fun and interactive recipe discovery app designed to make meal
+            planning effortless. Browse a variety of delicious recipes, save your favorites, and get
+            inspired. Whether you're looking for quick meals or trying something new, this app helps
+            you find the perfect dish with ease.
+          </p>
+          <br />
+          <p>
+            Enjoy a simple and clean interface with easy navigation, full list of recipes, and a
+            favorites list.
+          </p>
+        </h4>
+        <h5>
+          <p> Get ready to explore, cook, and savor amazing flavors!</p>
+        </h5>
         <CarouselComp />
       </div>
       <Footer />

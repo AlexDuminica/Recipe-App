@@ -7,7 +7,7 @@ export default function RecipeCardList({ recipes }) {
       <Row>
         {recipes?.map((meal) => {
           return (
-            <Col xs={12} md={4} lg={3} key={meal.id}>
+            <Col xs={6} md={4} lg={4} key={meal.id}>
               <RecipeCard
                 mealId={meal.id}
                 imgSrc={meal.image}
