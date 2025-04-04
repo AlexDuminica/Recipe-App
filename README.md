@@ -1,32 +1,50 @@
-# React template for final project
+# Let's Get Cooking
 
-This template was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fun and interactive recipe discovery app designed to make meal planning effortless. Browse a variety of delicious recipes, save your favorites, and get inspired! Whether you're looking for quick meals or trying something new, this app helps you find the perfect dish with ease
 
-## Available Scripts
+# Features
 
-In the project directory, you can run:
+✅ Recipe Discovery – Chose from a  selection of meals rendered by means of API integration recipes.
+✅ Save Favorites – Keep track of the recipes you love and access them anytime.
+✅ Detailed Instructions – View full cooking instructions and ingredients for each recipe.
+✅ Responsive Design – Optimized for both desktop and mobile devices.
 
-### `npm install`
-Installs all the dependencies needed for the project.
+# Tech Stack
 
-### `npm start`
+Frontend: React JS
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+UI Styling: Bootstrap, CSS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+API Integration: Fetching recipes from a free public API
 
-### `npm test`
+State Management: useState & useEffect
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Local Storage: Saves favorite recipes locally
 
-### `npm run build`
+# Installation & Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Clone the Repository
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+git clone https://github.com/your-username/recipe-app.git
+cd recipe-app
+
+Install Dependencies
+
+npm install
+
+Run the App
+
+npm start
+
+Open in Browser
+
+# Contact
+
+For any questions or feedback, feel free to reach out:
+
+GitHub: https://github.com/AlexDuminica
+
+LinkedIn: https://www.linkedin.com/in/alexandru-d-011031100/
+
+Netlify: https://recipe-app-alex-duminica.netlify.app/
 
