@@ -23,7 +23,6 @@ export const Cooking = () => {
   const [videoId, setVideoId] = useState();
 
   useEffect(() => {
-    console.log(video);
     if (video) {
       const urlParams = new URLSearchParams(new URL(video).search);
       setVideoId(urlParams.get("v"));
@@ -50,7 +49,7 @@ export const Cooking = () => {
           </h5>
           {ingredients?.map((ingredient) => {
             return (
-              <div className="d-flex justify-content-between mx-2 py-1">
+              <div className="d-flex justify-content-between mx-2 py-1" key={ingredient.key}>
                 <div className="ingredients">{ingredient.name}</div>
                 <div>{ingredient.measure}</div>
               </div>
