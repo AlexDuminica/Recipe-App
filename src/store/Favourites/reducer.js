@@ -21,8 +21,7 @@ export function favouritesReducer(state, action) {
       }
     }
     case "ADD_FAVOURITES_FROM_LOCAL_STORAGE": {
-      const localFavourites = JSON.parse(localStorage.getItem("favourites"));
-      console.log(localFavourites);
+      const localFavourites = JSON.parse(localStorage.getItem("favourites")) ?? { recipes: [] };
       return localFavourites;
     }
 
