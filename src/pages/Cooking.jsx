@@ -78,11 +78,11 @@ export const Cooking = () => {
           Save recipe
         </Button>
       </Container>
-      <Container className="my-5">
+      <Container className="my-5 youtube" style={{ padding: "0px" }}>
         <div>
           <iframe
-            width="560"
-            height="315"
+            width="540"
+            height="338"
             src={`https://www.youtube.com/embed/${videoId}`}
             title="YouTube video player"
             frameborder="0"

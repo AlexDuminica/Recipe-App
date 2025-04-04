@@ -40,11 +40,18 @@ img {
 @media (max-width: 765px) {
     .containerInCooking{
         display: flex; 
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
     }
+    .youtube{
+        display: flex;
+        flex-direction: column;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    
 }
 
 .ingredients {
